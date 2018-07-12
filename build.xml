@@ -1,0 +1,7 @@
+<project name="poc-news" default="WAR-build" basedir=".">
+	<description>poc-news - Build file</description>
+
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+
+</project>
