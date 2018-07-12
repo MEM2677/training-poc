@@ -3,7 +3,7 @@
 
     <Environment name="logActiveFileOutput" value="true" type="java.lang.String" override="false" />
     <Environment name="logName" value="poc-news" type="java.lang.String" override="false" />
-    <Environment name="logFilePrefix" value="C:\\Users\\super\\Desktop\\poc1\\poc-news\\target\\log_poc-news" type="java.lang.String" override="false" />
+    <Environment name="logFilePrefix" value="/opt/everis/training-poc/target/log_poc-news" type="java.lang.String" override="false" />
     <Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
     <Environment name="logFileSize" value="200000" type="java.lang.String" override="false" />
     <Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
@@ -14,24 +14,24 @@
     <Environment name="resourceRootURL" value="/poc-news/resources/" type="java.lang.String" override="false" />
     <Environment name="protectedResourceRootURL" value="/poc-news/protected/" type="java.lang.String" override="false" />
 
-    <Environment name="resourceDiskRootFolder" value="C:\\Users\\super\\Desktop\\poc1\\poc-news\\src\\main\\webapp\\resources" type="java.lang.String" override="false" />
-    <Environment name="protectedResourceDiskRootFolder" value="C:\\Users\\super\\Desktop\\poc1\\poc-news\\src\\main\\webapp\\protected" type="java.lang.String" override="false" />
+    <Environment name="resourceDiskRootFolder" value="/opt/everis/training-poc/src/main/webapp/resources" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceDiskRootFolder" value="/opt/everis/training-poc/src/main/webapp/protected" type="java.lang.String" override="false" />
 
-    <Environment name="indexDiskRootFolder" value="C:\\Users\\super\\Desktop\\poc1\\poc-news\\target\\temp\\indexdir" type="java.lang.String" override="false" />
+    <Environment name="indexDiskRootFolder" value="/opt/everis/training-poc/target/temp/indexdir" type="java.lang.String" override="false" />
     
-    <Environment name="portDataSourceClassName" value="org.postgresql.Driver" type="java.lang.String" override="false" />
-    <Environment name="servDataSourceClassName" value="org.postgresql.Driver" type="java.lang.String" override="false" />
+    <Environment name="portDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+    <Environment name="servDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
 	
     <Resource name="jdbc/portDataSource" auth="Container"
-              type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
               maxActive="8" maxIdle="4"
               username="agile" password="agile"
-              url="jdbc:postgresql://localhost:5432/poc-newsPort" />
+              url="jdbc:derby:/opt/everis/training-poc/target/derby/production/poc-newsPort;create=true" />
 
     <Resource name="jdbc/servDataSource" auth="Container"
-              type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
               maxActive="8" maxIdle="4"
               username="agile" password="agile"
-              url="jdbc:postgresql://localhost:5432/poc-newsServ" />
+              url="jdbc:derby:/opt/everis/training-poc/target/derby/production/poc-newsServ;create=true" />
 
 </Context>
